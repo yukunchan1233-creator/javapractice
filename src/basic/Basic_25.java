@@ -19,7 +19,6 @@ public class Basic_25 {
 
 		Scanner sc = new Scanner(System.in);
 		System.out.print("사원번호 : ");
-
 		int bno = sc.nextInt();
 		System.out.print("성명 : "); // 이부분주의
 		String name = sc.next();

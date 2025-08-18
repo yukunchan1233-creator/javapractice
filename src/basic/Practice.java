@@ -6,26 +6,49 @@ public class Practice {
 
 	public static void main(String[] args) {
 
-		//키보드로부터 정수를 입력 받아 가장 큰 값을 출력하시오
-		//입력예시
-		// 정수입력:  70 100 50
-		//출력예시
-		//가장 큰 값은 100입니다.
-		
-		//변수선언
-		int a,b,c ;   // int a=0,b=0,c=0;  --뭐.. 결과는 같음..
-		int max;	  // int max=0;
 		Scanner sc = new Scanner(System.in);
-		
-		 a = sc.nextInt();
-		 b = sc.nextInt();
-		 c = sc.nextInt();
-		
-		
-		  max = (a>b)?a:b;              //누적형변수 + 삼항연산자
-			max = (max>c)?max:c;
-			System.out.printf("가장 큰 값은 %d 입니다", max);
-		
+		System.out.print("사원번호 : ");
+		int bno = sc.nextInt();
+		System.out.print("성명 : ");
+		String name = sc.next();
+		System.out.print("성별 : ");
+		int gender = sc.nextInt();
+		System.out.print("직급 :");
+		int grade = sc.nextInt();
+		System.out.print("기본급 :");
+		int pay = sc.nextInt();
+		int bonus = 0;
+		String genderPrint;
+		String gradePrint; // 여기에 사원을 첨부터 넣어버려도 ok
+		int tot = pay + bonus;
+
+		if (gender == 1) {
+			genderPrint = "남자";
+		} else {
+			genderPrint = "여자";
+		}
+
+		if (grade == 1) {
+			gradePrint = "이사";
+			bonus = 300;
+		} else if (grade == 2) {
+			gradePrint = "부장";
+			bonus = 200;
+		} else if (grade == 3) {
+			gradePrint = "과장";
+			bonus = 100;
+		} else if (grade == 4) {
+			gradePrint = "대리";
+			bonus = 50;
+		} else {
+			gradePrint = "사원";
+			bonus = 10;
+		}
+
+		System.out
+				.println("사원번호" + "\t" + "성명" + "\t" + "성별" + "\t" + "직급" + "\t" + "기본급" + "\t" + "보너스" + "\t" + "총액");
+		System.out.println(
+				bno + "\t" + name + "\t" + genderPrint + "\t" + gradePrint + "\t" + pay + "\t" + bonus + "\t" + tot);
+
 	}
 }
- 
