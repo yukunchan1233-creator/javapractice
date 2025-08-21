@@ -28,7 +28,7 @@ public class Basic31_swap { // 배우는 이유 : 학번 오름차순, 내림차
 
 		// 변수를 이용하시오
 		int n = 0;
-		n = n + 1; // 1
+		n = n + 1; // 1 n += 1
 		System.out.println(n + "\t");
 		n = n + 1; // 2
 		System.out.println(n + "\t");
@@ -58,7 +58,34 @@ public class Basic31_swap { // 배우는 이유 : 학번 오름차순, 내림차
 		tkor = tkor + kor;
 		System.out.println("국어 합계: " + tkor);
 
-		//
+		// 1~5 숫자중 홀수의 합
+		n = 1;
+		int todd = 0;
+		if (n % 2 != 0) {
+			todd = todd + n;
+		}
+		n = n + 1;
+		if (n % 2 != 0) {
+			todd = todd + n;
+		}
+		n = n + 1;
+		if (n % 2 != 0) {
+			todd = todd + n;
+		}
+		n = n + 1;
+		if (n % 2 != 0) {
+			todd = todd + n;
+		}
+		n = n + 1;
+		if (n % 2 != 0) {
+			todd = todd + n;
+		}
+		n = n + 1;
+		if (n % 2 != 0) {
+			todd = todd + n;
+		}
+		System.out.println("1~5 까지 숫자중 홀수의 합 : " + todd);
+
 	}
 
 }

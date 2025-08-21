@@ -7,48 +7,37 @@ public class Practice {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		System.out.print("사원번호 : ");
-		int bno = sc.nextInt();
-		System.out.print("성명 : ");
-		String name = sc.next();
-		System.out.print("성별 : ");
-		int gender = sc.nextInt();
-		System.out.print("직급 :");
-		int grade = sc.nextInt();
-		System.out.print("기본급 :");
-		int pay = sc.nextInt();
-		int bonus = 0;
-		String genderPrint;
-		String gradePrint; // 여기에 사원을 첨부터 넣어버려도 ok
-		int tot = pay + bonus;
 
-		if (gender == 1) {
+		System.out.println("학번 : ");
+		int bno = sc.nextInt();
+		System.out.println("이름 : ");
+		String name = sc.next();
+		System.out.println("성별[남자:t, 여자:f] : ");
+		String gender = sc.next();
+		System.out.println("국어 영어 수학 점수입력 : ");
+		int kor = sc.nextInt();
+		int eng = sc.nextInt();
+		int mat = sc.nextInt();
+		int tot = kor + eng + mat;
+		double ave = tot / 3;
+		int pave = (int) ave;
+
+		String grade;
+		String pass;
+		String genderPrint;
+
+		if (gender.equals("t")) {
 			genderPrint = "남자";
 		} else {
 			genderPrint = "여자";
 		}
 
-		if (grade == 1) {
-			gradePrint = "이사";
-			bonus = 300;
-		} else if (grade == 2) {
-			gradePrint = "부장";
-			bonus = 200;
-		} else if (grade == 3) {
-			gradePrint = "과장";
-			bonus = 100;
-		} else if (grade == 4) {
-			gradePrint = "대리";
-			bonus = 50;
-		} else {
-			gradePrint = "사원";
-			bonus = 10;
+		switch (pave) {
+		case 10:
+		case 9:
+			grade = "A";
+			pass = "합격";
+			break;
 		}
-
-		System.out
-				.println("사원번호" + "\t" + "성명" + "\t" + "성별" + "\t" + "직급" + "\t" + "기본급" + "\t" + "보너스" + "\t" + "총액");
-		System.out.println(
-				bno + "\t" + name + "\t" + genderPrint + "\t" + gradePrint + "\t" + pay + "\t" + bonus + "\t" + tot);
-
 	}
 }
